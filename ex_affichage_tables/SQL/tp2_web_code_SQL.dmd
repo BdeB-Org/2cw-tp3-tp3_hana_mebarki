@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="tp2_web_code_SQL" id="56ED0477-C6DA-890C-585F-E812CD084A5C" version="3.5">
+<createdBy>hanal</createdBy>
+<createdTime>2024-05-15 07:05:35 UTC</createdTime>
+<ownerDesignName>tp2_web_code_SQL</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>56ED0477-C6DA-890C-585F-E812CD084A5C</designId>
+</OSDM_Design>
