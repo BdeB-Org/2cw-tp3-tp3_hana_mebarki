@@ -1,17 +1,19 @@
 .toast4-container {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   width: 100%;
   display: flex;
-  padding: var(--dl-space-space-unit);
+  padding: 10px;
   position: relative;
   align-items: center;
   flex-direction: row;
   background-color: #e2faff;
 }
+
 .toast4-logo {
   height: 60px;
   object-fit: cover;
 }
+
 .toast4-header {
   flex: 1;
   display: flex;
@@ -19,22 +21,26 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .toast4-content {
-  gap: var(--dl-space-space-halfunit);
+  gap: 10px;
   width: 606px;
   height: 114px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .toast4-title {
   color: #01025a;
   font-size: 30px;
   font-family: "Arial";
 }
+
 .toast4-subtitle {
   color: #2c3667;
 }
+
 .toast4-buttons {
   gap: 10px;
   width: 567px;
@@ -44,6 +50,7 @@
   flex-direction: row;
   justify-content: center;
 }
+
 .toast4-button1 {
   color: #ffffff;
   font-size: 15px;
@@ -54,6 +61,7 @@
   width: 200px;
   height: 30px;
 }
+
 .toast4-button2 {
   fill: #003EB3;
   color: #003EB3;
@@ -68,12 +76,14 @@
   width: 200px;
   height: 30px;
 }
+
 @media(max-width: 767px) {
   .toast4-logo {
     display: none;
   }
+
   .toast4-header {
-    gap: var(--dl-space-space-unit);
+    gap: 10px;
     align-items: flex-start;
     flex-direction: column;
   }
@@ -88,8 +98,24 @@
   align-items: center;
   flex-shrink: 0;
   flex-direction: column;
-  
+
 }
+
+/*pour image rest au milleu*/
+.thq-section-max-width {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*pour button rest au milleu*/
+.thq-flex-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .features11-container {
   width: 450px;
   height: 53px;
@@ -98,12 +124,14 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .features11-textinput {
   width: 781px;
   height: 48px;
   border-width: 0px;
   background-color: #D9D9D9;
 }
+
 .features11-container1 {
   flex: 0 0 auto;
   width: 100%;
@@ -111,6 +139,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .features11-container2 {
   gap: 10px;
   flex: 0 0 auto;
@@ -119,33 +148,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
+
 .features11-button {
   fill: #003EB3;
   color: #ffffff;
   border-width: 0px;
   background-color: #003EB3;
-  
-  
+
+
 }
+
 .features11-text1 {
   font-family: "Arial";
 }
+
 /*image de la ville*/
 .ville-image {
   width: 400px;
   height: 400px;
 }
+
 .features11-text4 {
   align-self: center;
   text-align: center;
   font-family: "Arial";
 }
+
 .features11-text5 {
   align-self: center;
   text-align: center;
 }
+
 /*Ville button réserver*/
 .features11-button2 {
   align-self: center;
@@ -163,30 +198,34 @@
   width: 200px;
   height: 30px;
   position: relative;
-  margin: 0px 0px 0px 24%;
-  
+  /* margin: 0px 0px 0px 24%; */
+
 }
+
 @media(max-width: 991px) {
   .features11-max-width {
     justify-content: center;
     flex-direction: column;
-    
+
   }
 }
+
 @media(max-width: 767px) {
   .features11-max-width {
     width: 100%;
-    
+
   }
 }
+
 @media(max-width: 479px) {
   .features11-max-width {
     padding: 49px;
-    
+
   }
+
   .features11-actions {
     width: 100%;
-    
+
 
   }
 }
@@ -198,19 +237,22 @@
   align-items: center;
   flex-direction: column;
 }
+
 .contact13-text {
   align-self: center;
   text-align: center;
   font-family: "Arial";
 }
+
 .contact13-max-width {
   gap: var(--dl-space-space-twounits);
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .contact13-section-title {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   width: auto;
   display: flex;
   max-width: 800px;
@@ -218,6 +260,7 @@
   flex-shrink: 0;
   flex-direction: column;
 }
+
 .contact13-content {
   gap: 49px;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -226,6 +269,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 /*google map
 .contact13-iframe {
   min-height: 400px;
@@ -244,24 +288,28 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .testimonial161-max-width {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .testimonial161-container {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   display: flex;
   max-width: 600px;
   align-items: center;
   margin-bottom: var(--dl-space-space-fourunits);
   flex-direction: column;
 }
+
 .testimonial161-text {
   align-self: center;
   text-align: center;
   font-family: "Arial";
 }
+
 .testimonial161-form {
   width: 1128px;
   height: 182px;
@@ -270,6 +318,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .testimonial161-textarea {
   width: 100%;
   height: 66px;
@@ -277,6 +326,7 @@
   padding-right: 0px;
   background-color: #d6e3ff;
 }
+
 .testimonial161-container1 {
   flex: 0 0 auto;
   width: 100%;
@@ -285,6 +335,7 @@
   align-items: center;
   justify-content: flex-end;
 }
+
 /* etait remplace par input
 .testimonial161-button {
   fill: #003EB3;
@@ -312,8 +363,9 @@
   justify-content: center;
   background-color: #e7ecff;
 }
+
 .testimonial161-container3 {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   width: 1015px;
   height: 60px;
   display: flex;
@@ -322,15 +374,18 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .testimonial161-image {
   width: 40px;
   height: 40px;
   object-fit: cover;
   border-radius: var(--dl-radius-radius-round);
 }
+
 .testimonial161-text4 {
   padding-right: var(--dl-space-space-threeunits);
 }
+
 .testimonial161-container4 {
   border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
@@ -338,24 +393,29 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .testimonial161-text5 {
   z-index: 100;
   align-self: center;
   text-align: left;
   margin-bottom: 10px;
 }
+
 .testimonial161-root-class-name {
   align-self: center;
 }
+
 @media(max-width: 991px) {
   .testimonial161-container {
     margin-bottom: var(--dl-space-space-threeunits);
   }
 }
+
 @media(max-width: 767px) {
   .testimonial161-container {
     margin-bottom: 49px;
   }
+
   .testimonial161-container2 {
     width: 100%;
   }
@@ -369,6 +429,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .page1-navbar1 {
   flex: 0 0 auto;
   width: 100%;
@@ -377,6 +438,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page1-hero2 {
   flex: 0 0 auto;
   width: 100%;
@@ -385,6 +447,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page1-features3 {
   flex: 0 0 auto;
   width: 100%;
@@ -393,6 +456,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page1-contact4 {
   flex: 0 0 auto;
   width: 100%;
@@ -401,6 +465,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page1-footer5 {
   flex: 0 0 auto;
   width: 100%;
@@ -494,10 +559,13 @@
   align-items: center;
   flex-direction: column;
 }
+
 .contact-form5-section-title {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   align-items: center;
+  margin: 0px 0px 15% 0px;
 }
+
 .contact-form5-content {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
@@ -505,17 +573,20 @@
   align-items: center;
   flex-direction: column;
 }
+
 .contact-form5-text {
   font-family: "Arial";
 }
+
 .contact-form5-container {
   flex: 0 0 auto;
   width: auto;
-  height: 465px;
+  height: auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
+
 .contact-form5-form {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 352px;
@@ -525,56 +596,81 @@
   padding-right: 42px;
   justify-content: center;
 }
+
 .contact-form5-input {
-  gap: var(--dl-space-space-halfunit);
+  gap: 10px;
   width: 188px;
   display: flex;
   align-self: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .contact-form5-text2 {
   align-self: flex-start;
+
 }
+
 .contact-form5-input1 {
-  gap: var(--dl-space-space-halfunit);
-  width: 220px;
+  gap: 10px;
+  width: 820px;
+  /*donner tout l'espace au question de fromulaire */
   display: flex;
   align-self: stretch;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   justify-content: flex-start;
 }
+
+/*les questions  du formulaire*/
+.question-formulaire {
+  font-weight: bold;
+}
+
+/* "*" color rouge pour montrer c est obligatoire */
+.question-formulaire span {
+  font-size: 18px;
+  color: red;
+}
+
+
 .contact-form5-text3 {
   align-self: flex-start;
 }
+
 .contact-form5-select1 {
   align-self: flex-start;
 }
+
 .contact-form5-input2 {
-  gap: var(--dl-space-space-halfunit);
+  gap: 10px;
   width: 214px;
   display: flex;
   align-self: stretch;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .contact-form5-text4 {
   align-self: flex-start;
 }
+
 .contact-form5-checkbox {
-  gap: var(--dl-space-space-unit);
+  gap: 10px;
   display: flex;
   align-self: flex-start;
   align-items: center;
 }
+
 .contact-form5-button {
   align-self: flex-start;
   background-color: var(--dl-color-primary-100);
 }
+
 .contact-form5-action1 {
   font-family: "Arial";
 }
+
 .contact-form5-button1 {
   fill: var(--dl-color-primary-100);
   color: var(--dl-color-primary-100);
@@ -583,43 +679,64 @@
   border-width: 1px;
   background-color: #ffffff;
 }
+
 .contact-form5-action11 {
   font-family: "Arial";
 }
-.contact-form5-container1 {
-  width: 289px;
-  height: 103px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #D9D9D9;
+
+/*
+.form-row{
+  
 }
+*/
+
+/*votre solde total*/
+.contact-form5-container1 {
+  width: 280px;
+  height: auto;
+  padding: 30px;
+  
+  background-color: #D9D9D9;
+
+  margin: 50% 0% 0% 0%;
+  /*bouger en bas*/
+}
+
+
+
+
+
 @media(max-width: 991px) {
   .contact-form5-input {
-    gap: var(--dl-space-space-halfunit);
+    gap: 10px;
     width: 50%;
     flex-direction: column;
   }
+
   .contact-form5-input1 {
-    gap: var(--dl-space-space-halfunit);
+    gap: 10px;
     width: 50%;
     flex-direction: column;
   }
+
   .contact-form5-input2 {
-    gap: var(--dl-space-space-halfunit);
+    gap: 10px;
     width: 50%;
     flex-direction: column;
   }
+
   .contact-form5-checkbox {
     align-self: flex-start;
   }
 }
+
 @media(max-width: 479px) {
   .contact-form5-text1 {
     text-align: center;
   }
+
   .contact-form5-form {
-    padding: var(--dl-space-space-unit);
+    padding: 10px;
   }
 }
 
@@ -631,6 +748,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .page2-navbar1 {
   flex: 0 0 auto;
   width: 100%;
@@ -639,6 +757,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page2-hero2 {
   flex: 0 0 auto;
   width: 100%;
@@ -647,6 +766,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page2-features3 {
   flex: 0 0 auto;
   width: 100%;
@@ -655,6 +775,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page2-contact4 {
   flex: 0 0 auto;
   width: 100%;
@@ -663,6 +784,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .page2-footer5 {
   flex: 0 0 auto;
   width: 100%;

@@ -127,37 +127,37 @@ async function fetchData() {
   
   fetchData();
   */
-  
-  //autre essai pour faire une post
-  /*
-  const url3 = "http://127.0.0.1:8080/ords/hr2/comentaire";
-  fetch("url3", {
-  method: "POST",
-  body: JSON.stringify({
-    COMMENTAIRE_ID: 6,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8"
-  }
+
+//autre essai pour faire une post
+/*
+const url3 = "http://127.0.0.1:8080/ords/hr2/comentaire";
+fetch("url3", {
+method: "POST",
+body: JSON.stringify({
+  COMMENTAIRE_ID: 6,
+  TEXTE: '80/100',
+  TOURISTE_TOURISTE_ID: 3
+}),
+headers: {
+  "Content-type": "application/json; charset=UTF-8"
+}
 });
 
 fetch("url3", {
-  method: "POST",
-  body: JSON.stringify({
-    COMMENTAIRE_ID: 6,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8"
-  }
+method: "POST",
+body: JSON.stringify({
+  COMMENTAIRE_ID: 6,
+  TEXTE: '80/100',
+  TOURISTE_TOURISTE_ID: 3
+}),
+headers: {
+  "Content-type": "application/json; charset=UTF-8"
+}
 })
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+.then((response) => response.json())
+.then((json) => console.log(json));
 */
-  //autre methode pour post
+//autre methode pour post
 /*
 const xhr = new XMLHttpRequest();
 xhr.open("POST", "http://127.0.0.1:8080/ords/hr2/comentaire");
@@ -176,55 +176,55 @@ xhr.onload = () => {
 };
 xhr.send(body);
   */
- //autre facon pour post
- /*
+//autre facon pour post
+/*
 // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- const body = {
-    COMMENTAIRE_ID: 6,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3
-  };
-  $.post("http://127.0.0.1:8080/ords/hr2/comentaire", body, (data, status) => {
-    console.log(data);
-  });
-  */
-  //autre facon pour post npm init -y npm install axios
-  /*
-  npm i axios --global 
-  import axios from 'axios';
-  
-    // --global flags will save you the stress of insstalling axios again.
+const body = {
+   COMMENTAIRE_ID: 6,
+   TEXTE: '80/100',
+   TOURISTE_TOURISTE_ID: 3
+ };
+ $.post("http://127.0.0.1:8080/ords/hr2/comentaire", body, (data, status) => {
+   console.log(data);
+ });
+ */
+//autre facon pour post npm init -y npm install axios
+/*
+npm i axios --global 
+import axios from 'axios';
+ 
+  // --global flags will save you the stress of insstalling axios again.
 
-  axios.post("http://127.0.0.1:8080/ords/hr2/comentaire", {
-    COMMENTAIRE_ID: 6,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3
-  })
-  .then((response) => console.log(response.data))
-  .then((error) => console.log(error));
-  */
-  //autre facon pour post npm init -y npm install axios*************
-  /*
-  let data = { COMMENTAIRE_ID: 0006,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3};
+axios.post("http://127.0.0.1:8080/ords/hr2/comentaire", {
+  COMMENTAIRE_ID: 6,
+  TEXTE: '80/100',
+  TOURISTE_TOURISTE_ID: 3
+})
+.then((response) => console.log(response.data))
+.then((error) => console.log(error));
+*/
+//autre facon pour post npm init -y npm install axios*************
+/*
+let data = { COMMENTAIRE_ID: 0006,
+  TEXTE: '80/100',
+  TOURISTE_TOURISTE_ID: 3};
 
-  fetch("http://127.0.0.1:8080/ords/hr2/comentaire", {
-    method: "POST",
-    headers: {'Content-Type': 'application/json'}, 
-    body: JSON.stringify(data)
-  }).then(res => {
-    console.log("Request complete! response:", res);
-  });
-  */
+fetch("http://127.0.0.1:8080/ords/hr2/comentaire", {
+  method: "POST",
+  headers: {'Content-Type': 'application/json'}, 
+  body: JSON.stringify(data)
+}).then(res => {
+  console.log("Request complete! response:", res);
+});
+*/
 
-  //autre facon post
-  /*
+//autre facon post
+/*
 let url = "http://127.0.0.1:8080/ords/hr2/comentaire";
 someStuff= { COMMENTAIRE_ID: 0006,
-    TEXTE: '80/100',
-    TOURISTE_TOURISTE_ID: 3};
-  xhr.open("POST", url, true);
+  TEXTE: '80/100',
+  TOURISTE_TOURISTE_ID: 3};
+xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 xhr.send(someStuff);
 */
@@ -256,6 +256,10 @@ xhr.send();
 //core ajoute les en-têtes CORS (Cross-Origin Resource Sharing) à vos réponses, 
 //ce qui permet aux requêtes AJAX d’accéder à votre serveur depuis une origine différente.
 //http://localhost:3000/submit-comment  pour voir la requete
+
+//***** npm install express oracledb body-parser */
+//**npm install cors */
+//**pour exécuter fait la commande node test.js */
 const express = require('express');
 const oracledb = require('oracledb');
 const bodyParser = require('body-parser');
@@ -281,32 +285,32 @@ app.post('/submit-comment', async (req, res) => {
   let conn;
 
   try {
-      conn = await oracledb.getConnection({
-          user: 'restscott',
-          password: 'oracle',
-          connectString: 'localhost:1521/freepdb1'
-      });
+    conn = await oracledb.getConnection({
+      user: 'restscott',
+      password: 'oracle',
+      connectString: 'localhost:1521/freepdb1'
+    });
 
-      const result = await conn.execute(
-          `INSERT INTO comentaire(COMMENTAIRE_ID, TEXTE ,TOURISTE_TOURISTE_ID) VALUES (:commentaire_id, :texte, :touriste_touriste_id)`,
-          [req.body.commentaire_id, req.body.texte, req.body.touriste_touriste_id],
-          { autoCommit: true } 
-      );
+    const result = await conn.execute(
+      `INSERT INTO comentaire(COMMENTAIRE_ID, TEXTE ,TOURISTE_TOURISTE_ID) VALUES (:commentaire_id, :texte, :touriste_touriste_id)`,
+      [req.body.commentaire_id, req.body.texte, req.body.touriste_touriste_id],
+      { autoCommit: true }
+    );
 
-      console.log("Rows inserted: " + result.rowsAffected);
-      // Retourner l'ID du nouveau commentaire
-      res.json({message: "Commentaire ajouté avec succès!", commentaire_id: req.body.commentaire_id});
+    console.log("Rows inserted: " + result.rowsAffected);
+    // Retourner l'ID du nouveau commentaire
+    res.json({ message: "Commentaire ajouté avec succès!", commentaire_id: req.body.commentaire_id });
   } catch (err) {
-      console.error(err);
-      res.status(500).json({message: "Une erreur s'est produite lors de l'insertion du commentaire."});
+    console.error(err);
+    res.status(500).json({ message: "Une erreur s'est produite lors de l'insertion du commentaire." });
   } finally {
-      if (conn) {
-          try {
-              await conn.close();
-          } catch (err) {
-              console.error(err);
-          }
+    if (conn) {
+      try {
+        await conn.close();
+      } catch (err) {
+        console.error(err);
       }
+    }
   }
 });
 
@@ -436,32 +440,32 @@ app.post('/submit-reservation', async (req, res) => {
   let conn;
 
   try {
-      conn = await oracledb.getConnection({
-          user: 'restscott',
-          password: 'oracle',
-          connectString: 'localhost:1521/freepdb1'
-      });
+    conn = await oracledb.getConnection({
+      user: 'restscott',
+      password: 'oracle',
+      connectString: 'localhost:1521/freepdb1'
+    });
 
-      const result = await conn.execute(
-          `INSERT INTO panier_reservation(RESERVATION_ID, DATE_RESERVATION ,TOURISTE_TOURISTE_ID,AUTOBUS_AUTOBUS_ID,NOMBRE_PASSAGER,TYPE_REPAS,VISITE_VILLE_ID) VALUES (:RESERVATION_ID, TO_DATE(:DATE_RESERVATION, 'YYYY-MM-DD'), :TOURISTE_TOURISTE_ID, :AUTOBUS_AUTOBUS_ID, :NOMBRE_PASSAGER, :TYPE_REPAS, :VISITE_VILLE_ID)`,
-          [req.body.reservation_id, req.body.date_reservation, req.body.touriste_touriste_id, req.body.autobus_autobus_id, req.body.nombre_passager, req.body.type_repas, req.body.visite_ville_id],
-          { autoCommit: true } 
-      );
+    const result = await conn.execute(
+      `INSERT INTO panier_reservation(RESERVATION_ID, DATE_RESERVATION ,TOURISTE_TOURISTE_ID,AUTOBUS_AUTOBUS_ID,NOMBRE_PASSAGER,TYPE_REPAS,VISITE_VILLE_ID) VALUES (:RESERVATION_ID, TO_DATE(:DATE_RESERVATION, 'YYYY-MM-DD'), :TOURISTE_TOURISTE_ID, :AUTOBUS_AUTOBUS_ID, :NOMBRE_PASSAGER, :TYPE_REPAS, :VISITE_VILLE_ID)`,
+      [req.body.reservation_id, req.body.date_reservation, req.body.touriste_touriste_id, req.body.autobus_autobus_id, req.body.nombre_passager, req.body.type_repas, req.body.visite_ville_id],
+      { autoCommit: true }
+    );
 
-      console.log("Rows inserted: " + result.rowsAffected);
-      // Retourner l'ID de la nouvelle réservation
-      res.json({message: "Réservation ajoutée avec succès!", reservation_id: req.body.reservation_id});
+    console.log("Rows inserted: " + result.rowsAffected);
+    // Retourner l'ID de la nouvelle réservation
+    res.json({ message: "Réservation ajoutée avec succès!", reservation_id: req.body.reservation_id });
   } catch (err) {
-      console.error(err);
-      res.status(500).json({message: "Une erreur s'est produite lors de l'insertion de la réservation."});
+    console.error(err);
+    res.status(500).json({ message: "Une erreur s'est produite lors de l'insertion de la réservation." });
   } finally {
-      if (conn) {
-          try {
-              await conn.close();
-          } catch (err) {
-              console.error(err);
-          }
+    if (conn) {
+      try {
+        await conn.close();
+      } catch (err) {
+        console.error(err);
       }
+    }
   }
 });
 app.listen(3050, () => {

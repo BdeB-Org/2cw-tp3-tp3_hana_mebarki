@@ -132,7 +132,7 @@ function createNode(element) {
             let results = employees.map(function (employee) {
                 // Convertir en minuscules pour permettre la recherche insensible à la casse
                 if (employee.nom_ville_visite.toLowerCase() === visite) {
-                    return `${employee.nom_ville_visite} ${employee.description_visite}`;
+                    return `${employee.nom_ville_visite} : ${employee.description_visite}. <br/>   La durée de la visite ${employee.duree_visite} . <br/>  Le prix pour une seul personne : ${employee.prix_par_personne} $` ;
                 }
             }).filter(Boolean); // Enlève les valeurs undefined du tableau
   
