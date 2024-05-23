@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="configuration_modele_relationnel_jaune_2024_05_22" id="41F7C377-265A-1001-490A-C25050431377" version="3.5">
+<createdBy>hanal</createdBy>
+<createdTime>2024-05-23 05:30:12 UTC</createdTime>
+<ownerDesignName>configuration_modele_relationnel_jaune_2024_05_22</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>41F7C377-265A-1001-490A-C25050431377</designId>
+</OSDM_Design>
