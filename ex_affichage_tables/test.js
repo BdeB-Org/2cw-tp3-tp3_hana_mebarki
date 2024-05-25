@@ -292,8 +292,8 @@ app.post('/submit-comment', async (req, res) => {
     });
 
     const result = await conn.execute(
-      `INSERT INTO comentaire(COMMENTAIRE_ID, TEXTE ,TOURISTE_TOURISTE_ID) VALUES (:commentaire_id, :texte, :touriste_touriste_id)`,
-      [req.body.commentaire_id, req.body.texte, req.body.touriste_touriste_id],
+      `INSERT INTO commentaire(COMMENTAIRE_ID, TEXT ,TOURISTE_TOURISTE_ID) VALUES (:commentaire_id, :text, :touriste_touriste_id)`,
+      [req.body.commentaire_id, req.body.text, req.body.touriste_touriste_id],
       { autoCommit: true }
     );
 
@@ -448,7 +448,7 @@ app.post('/submit-reservation', async (req, res) => {
 
     const result = await conn.execute(
       `INSERT INTO panier_reservation(RESERVATION_ID, DATE_RESERVATION ,TOURISTE_TOURISTE_ID,AUTOBUS_AUTOBUS_ID,NOMBRE_PASSAGER,TYPE_REPAS,VISITE_VILLE_ID) VALUES (:RESERVATION_ID, TO_DATE(:DATE_RESERVATION, 'YYYY-MM-DD'), :TOURISTE_TOURISTE_ID, :AUTOBUS_AUTOBUS_ID, :NOMBRE_PASSAGER, :TYPE_REPAS, :VISITE_VILLE_ID)`,
-      [req.body.reservation_id, req.body.date_reservation, req.body.touriste_touriste_id, req.body.autobus_autobus_id, req.body.nombre_passager, req.body.type_repas, req.body.visite_ville_id],
+      [req.body.reservation_id, req.body.date_reservation, req.body.touriste_touriste_id, req.body.autobus_autobus_id, req.body.nombre_passager, req.body.type_repas, req.body.visite_id],
       { autoCommit: true }
     );
 

@@ -194,7 +194,7 @@ function createNode(element) {
     return document.createElement(element);
 }
 
-function createTestimonial(comentaire) {
+function createTestimonial(commentaire) {
     let divContainer = createNode("div"),
         divInner = createNode("div"),
         img = createNode("img"),
@@ -214,7 +214,7 @@ function createTestimonial(comentaire) {
     img.src = "https://play.teleporthq.io/static/svg/default-img.svg";
     img.alt = "image";
     strong.textContent = "Touriste";
-    span.textContent = `${comentaire.touriste_touriste_id} ${comentaire.texte}`;
+    span.textContent = `${commentaire.touriste_touriste_id} ${commentaire.text}`;
 
     // Ajoutez les éléments au div interne
     divInner.appendChild(img);
@@ -228,16 +228,16 @@ function createTestimonial(comentaire) {
     return divContainer;
 }
 
-const url3 = "http://127.0.0.1:8080/ords/hr2/comentaire";
+const url3 = "http://127.0.0.1:8080/ords/hr2/commentaire";
 
 fetch(url3)
 .then((resp) => resp.json())
 .then(function (data) {
-    let comentaires = data.items;
+    let commentaires = data.items;
     let divListeCommentaires = document.getElementById('listeCommentaires');
 
-    return comentaires.map(function (comentaire) {
-        let testimonial = createTestimonial(comentaire);
+    return commentaires.map(function (commentaire) {
+        let testimonial = createTestimonial(commentaire);
 
         // Ajoutez le témoignage à la liste des commentaires
         divListeCommentaires.appendChild(testimonial);
@@ -254,14 +254,14 @@ fetch(url3)
   document.getElementById('commentForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
-    //let commentaire_id = document.getElementById('commentaire_id').value;  //sera incrementer de comentaire le plus recent
-    let texte = document.getElementById('texte').value;
+    //let commentaire_id = document.getElementById('commentaire_id').value;  //sera incrementer de commentaire le plus recent
+    let text = document.getElementById('text').value;
     //**on toujours utilise le touriste id 1(compt par defaut) car on n a pas creer un compte on peut comme meme envoyer notre commentaire comme anonyme */
     let touriste_touriste_id = 1;
     
     let data = {
         "commentaire_id": dernierCommentaireId,
-        "texte": texte,
+        "text": text,
         "touriste_touriste_id": touriste_touriste_id
     };
   
@@ -278,7 +278,7 @@ fetch(url3)
       // Ajouter le nouveau commentaire à la liste
       let li = createNode("li"),
         span = createNode("span");
-      span.innerHTML = `${data.commentaire_id} ${data.texte} ${data.touriste_touriste_id} `;
+      span.innerHTML = `${data.commentaire_id} ${data.text} ${data.touriste_touriste_id} `;
       append(li, span);
       append(emp_ul, li);// Mettre à jour dernierCommentaireId avec l'ID du nouveau commentaire
       dernierCommentaireId = data.commentaire_id;
@@ -304,22 +304,22 @@ fetch(url3)
       commentaires.sort((a, b) => b.commentaire_id - a.commentaire_id);
       
       // Prendre le premier commentaire (qui a l'ID le plus grand)
-      let dernierComentaire = commentaires[0];
+      let dernierCommentaire = commentaires[0];
       
-      if (!dernierComentaire || dernierComentaire.commentaire_id === undefined) {
+      if (!dernierCommentaire || dernierCommentaire.commentaire_id === undefined) {
         console.error('Commentaire non valide ou ID de commentaire indéfini');
         return;
       }
   
       let li = createNode("li"),
         span = createNode("span");
-      span.innerHTML = `${dernierComentaire.commentaire_id} ${dernierComentaire.texte} ${dernierComentaire.touriste_touriste_id} `;
+      span.innerHTML = `${dernierCommentaire.commentaire_id} ${dernierCommentaire.text} ${dernierCommentaire.touriste_touriste_id} `;
       /*
       append(li, span);
       append(emp_ul, li);
       */
   
-      dernierCommentaireId = dernierComentaire.commentaire_id;
+      dernierCommentaireId = dernierCommentaire.commentaire_id;
     })
     .then(() => {
       // Après la boucle, dernierCommentaireId contient l'ID du dernier commentaire
@@ -401,7 +401,7 @@ fetch(url3)
    
   //enter un commentaire dans la base de donnée ******
   /*
-  let dernierComentaireId= 0004;
+  let dernierCommentaireId= 0004;
   
   
   // JavaScript
@@ -449,7 +449,7 @@ fetch(url3)
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({commentaire_id: lastCommentId, texte: comment, touriste_touriste_id: touristeId}),
+        body: JSON.stringify({commentaire_id: lastCommentId, text: comment, touriste_touriste_id: touristeId}),
       });
     })
     .then(response => response.json())
@@ -504,10 +504,10 @@ fetch(url3)
   //post
   /*
     let data = { COMMENTAIRE_ID: 0006,
-      TEXTE: '80/100',
+      TEXT: '80/100',
       TOURISTE_TOURISTE_ID: 3};
   
-    fetch("http://127.0.0.1:8080/ords/hr2/comentaire", {
+    fetch("http://127.0.0.1:8080/ords/hr2/commentaire", {
       method: "POST",
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(data)
@@ -516,11 +516,11 @@ fetch(url3)
     });
     //post
   
-    fetch("http://127.0.0.1:8080/ords/hr2/comentaire", {
+    fetch("http://127.0.0.1:8080/ords/hr2/commentaire", {
     method: "POST",
     body: JSON.stringify({
       COMMENTAIRE_ID: 0006,
-      TEXTE: '80/100',
+      TEXT: '80/100',
       TOURISTE_TOURISTE_ID: 3
     }),
     headers: {
@@ -541,7 +541,7 @@ fetch(url3)
   /*
   const data = {
     COMMENTAIRE_ID: '0005',
-    TEXTE: 'impossible d oublier',
+    : 'impossible d oublier',
     TOURISTE_TOURISTE_ID: 3
   };
   
@@ -585,8 +585,8 @@ fetch(url3)
       });
   
       const result = await connection.execute(
-        `INSERT INTO commentaire (COMMENTAIRE_ID, TEXTE, TOURISTE_TOURISTE_ID)
-         VALUES (:id, :texte, :touristeId)`,
+        `INSERT INTO commentaire (COMMENTAIRE_ID, TEXT, TOURISTE_TOURISTE_ID)
+         VALUES (:id, :text, :touristeId)`,
         [5, 'impossible d oublier', 3], // Les valeurs à insérer
         { autoCommit: true } // Auto-commit après l'insertion
       );

@@ -23,7 +23,7 @@ fetch(url2)
       // Définissez le texte de l'option sur le nom de la ville
       option.textContent = ville.nom_ville_visite;
       // Définissez la valeur de l'option sur l'ID de la ville
-      option.value = ville.ville_id;//**pour envoyer le formulaire à la base de donnée avec le id de la ville choisi */
+      option.value = ville.visite_id;//**pour envoyer le formulaire à la base de donnée avec le id de la ville choisi */
 
       // Ajoutez l'option à la liste déroulante
       select.appendChild(option);
@@ -173,7 +173,7 @@ document.getElementById('busForm').addEventListener('submit', function (e) {
     "autobus_autobus_id": Number(document.getElementById("autobus_choisi").value),
     "nombre_passager": Number(document.getElementById("nombre_passage").value),
     "type_repas": document.getElementById("contact-form-5-options").value,
-    "visite_ville_id": villeId
+    "visite_id": villeId
   };
 
 
@@ -242,6 +242,32 @@ function incrementer() {
 function afficherReservation() {
   let villeId = Number(document.getElementById("ville_a_visite").value);
   
+  let villeId2 = Number(document.getElementById("ville_a_visite").value);
+  let prix_par_personne;
+  if(villeId2==1){
+    prix_par_personne= 35;
+
+  }
+  else if(villeId2==2){
+    prix_par_personne= 60;
+
+  }
+  else if(villeId2==3){
+    prix_par_personne= 40;
+
+  }
+  else{
+    prix_par_personne= null;
+  }
+  let nbPassage = Number(document.getElementById("nombre_passage").value);
+ // document.getElementById("solde").innerHTML = ` ${nbPassage *prix_par_personne } $`;
+
+
+
+
+
+
+
     let reservation_id = 5;
     //"date_reservartion": new Date(document.getElementById("date").value).toISOString(),
     let date_reservation = document.getElementById("date").value;
@@ -249,9 +275,12 @@ function afficherReservation() {
     let autobus_autobus_id = Number(document.getElementById("autobus_choisi").value);
     let nombre_passager = Number(document.getElementById("nombre_passage").value);
     let type_repas = document.getElementById("contact-form-5-options").value;
-    let visite_ville_id = villeId ;
-    let data = `Reservation_id: ${reservation_id},</br> Date_reservation : ${date_reservation},</br> touriste_touriste_id: ${touriste_touriste_id},</br> Autobus_autobus_id: ${autobus_autobus_id},</br> Nombre_passager ${nombre_passager},</br> Type_repas: ${type_repas},</br> Visite_ville_id: ${visite_ville_id}`;
-  
+    let visite_id = villeId ;
+    let cout_total = Number(document.getElementById("solde").value);
+
+    let data = `Reservation_id: ${reservation_id},</br> Date_reservation : ${date_reservation},</br> touriste_touriste_id: ${touriste_touriste_id},</br> Autobus_autobus_id: ${autobus_autobus_id},</br> Nombre_passager ${nombre_passager},</br> Type_repas: ${type_repas},</br> Visite_id: ${visite_id} ,</br> Cout_total: ${nbPassage *prix_par_personne } $`;
+
+
   document.getElementById("afficherReservation").innerHTML = `Votre réservation est : </br> </br> ${data}`
   console.log(data);
 
