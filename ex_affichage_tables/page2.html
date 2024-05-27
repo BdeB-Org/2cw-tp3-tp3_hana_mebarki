@@ -119,27 +119,7 @@
 
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
-</head>
+  </head>
 
 <body>
   <link rel="stylesheet" href="./stypePage1.css" />
@@ -173,9 +153,16 @@
               <span>Découvrir les villes</span>
             </button>
           </a>
+
           <button type="button" class="toast4-button2 thq-button-outline">
             <span>Réserver vos places</span>
           </button>
+          <!--reference vers autre page-->
+          <a href="./connexion.html">
+            <button type="button" class="toast4-button2 thq-button-outline" >
+              <span>Connexion</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -226,8 +213,11 @@
                 <p class="question-formulaire"><span>*</span>Date du départ (vérifier que le bus choisi est disponible à
                   la date
                   choisie)</p>
-                <label for="date"></label>
-                <input type="date" id="date" name="date" required />
+                <label for="date">
+                  <input type="date" id="date" name="date" required />
+                </label>
+                
+                
               </div>
 
               <p class="question-formulaire"><span>*</span>Le nombre de passages (vérifier que le bus choisi a la
@@ -272,9 +262,9 @@
                 J'accepte les termes et services
               </label>
             </div>
-            <input type="submit" value="Envoyer" onclick="incrementer()">
-
-
+            <a href="./connexion.html">
+             <input type="submit" value="Envoyer" onclick="incrementer()">
+            </a>
             <input type="button" value="Afficher reservation" onclick="afficherReservation()">
             <p id="afficherReservation"></p>
             <!--
