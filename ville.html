@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page1 - Reflecting Physical Hare</title>
+    <meta property="og:title" content="Page1 - Reflecting Physical Hare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+
+    
+  </head>
+  <body>
+    <link rel="stylesheet" href="stypePage1.css" />
+    <div>
+      <link href="stypePage1.css" rel="stylesheet" />
+      
+      <div class="page1-container">
+        <!--Bannier debut-->
+        <div class="page1-navbar1"></div>
+        <div class="toast4-container">
+          <!--icon de bus icons8.com/icons/set/bus-->
+          <img
+            alt="image"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzklEQVR4nO2ZvU7DMBRGDwws0IGIkQeAFQEDPzuwUPVZeAAkJCqExMA7MDF0aNjZ4BnKltIBBiZAFQiMjBIJVbFrl7h22nzSla3q6n732ImS1KDWMnAEtIAH4AX4BMSY4xXoANdAHZjBULPAMfDhoWlhEDFQMwE5D6BZMSSuhkGsAF8BNCoMYk0HcmFRaAs32jb0P9MVubcAcSlhELe6As8lAunoCvQtQHYcQewa+j/piogSRX9SQMTUgvSABhAxfkWpd88E5ADopvO8ZFnItxoaENn7fjbJfsxL9rETg4o0IHJMsokOJBQJDcjvvAIZs0S1I1T3iBOJ6tKiZJdWdwKeIwnp4z0pMUgC7JkmhyDx37ffiQGJ8K+lIkBCeI0/CeXDSv5fuzhCrAKXwHcRICGHUr4bExXIgHyvsKh2ZECqFWkDG8B8OsYOV7lt4aWUqnCeWo4gbLyUykteV+RuOgBZt/SyAlGd19UcgNQsvaZzR2JF7o0DkNjSywokM5CrspCOLiBG8VLq3WGDRcdbUYehvuNOB1IPoEFhGIc6EN19EloM1dSBuJIoyl91Xvc3Hp1hUJx/06DQqUOQZlH+c2mxvJWRKyGLyBxXGsn/B6l4OuxEhf6WAAAAAElFTkSuQmCC"
+            class="toast4-logo"
+          />
+          <div class="toast4-header">
+            <div class="toast4-content">
+              <h3 class="toast4-title thq-heading-3">Couleur de l'aventure</h3>
+              <span class="toast4-subtitle thq-body-large">
+                <span>Visite guidée en bus touristique dans des villes</span>
+              </span>
+            </div>
+            <div class="toast4-buttons">
+              <button
+                type="button"
+                autofocus="true"
+                class="toast4-button1 thq-button-filled"
+              >
+                <span>Découvrir les villes</span>
+              </button>
+              <!--reference vers autre page-->
+              <a href="./reservation.html">
+                <button type="button" class="toast4-button2 thq-button-outline" >
+                  <span>Réserver vos places</span>
+                </button>
+               <!--reference vers autre page-->
+              <a href="./connexion.html">
+                <button type="button" class="toast4-button2 thq-button-outline" >
+                  <span>Connexion</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Bannier fin-->
+        <div class="page1-hero2"></div>
+        <div class="features11-layout349 thq-section-padding">
+          <div class="features11-container">
+            <span>Rechercher une ville à visiter</span>
+          </div>
+          <!--Chercher ville -->
+          <input
+            id="rechercheVille" onchange="afficherVille()" value="ville"
+            type="text"
+            placeholder="Nom de la ville"
+            class="features11-textinput input"
+          />
+          
+          <div class="features11-container1">
+            <div class="features11-container2">
+              <button
+                type="button"
+                autofocus="true"
+                class="features11-button button"
+              >
+                <span class="features11-text1">
+                  <span>Ville</span>
+                  <br />
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="thq-section-max-width thq-flex-column features11-max-width"
+          >
+            <!--image de la ville va changer avec un id-->
+            <img height="50px" width="50px"
+              alt="image" id="ville-image"
+              src="./media/defaut.jpg"
+              class="ville-image thq-img-ratio-4-3"
+            />
+            <div class="thq-flex-column">
+              <h2 class="features11-text4 thq-heading-2">
+                <span>Découvrez la ville</span>
+              </h2>
+              <p class="features11-text5 thq-body-large">
+                <span>caractéristique et attractions touristiques</span>
+              </p>
+              <!--afficher ville-->
+              
+              <p class="features11-text5 thq-body-large">
+                <span  id="visite"></span>
+              </p>
+
+              <a href="./reservation.html">
+                <button type="button" class="features11-button2 thq-button-outline" >
+                  <span>Réserver vos places</span>
+                </button>
+              </a>
+              
+ 
+              
+            </div>
+          </div>
+        </div>
+        <div class="contact13-contact20 thq-section-padding">
+          <h2 class="contact13-text thq-heading-2">
+            <span>Itinéraire possible</span>
+          </h2>
+          <div class="contact13-max-width thq-section-max-width">
+            <div class="contact13-section-title">
+              <div class="contact13-content"></div>
+            </div>
+            <!---changer"le google map"Itinéraire selon la ville avec id-->
+            <iframe 
+              src=''
+              title="Map"
+              class="contact13-iframe"
+              id="ville-itineraire"
+            ></iframe>
+            <!---
+            <img
+              alt="noimage"
+              src="https://maps.app.goo.gl/Lo3ECSB8V9tMyPQB7"
+              class="contact13-image thq-img-ratio-16-9"
+            />
+            -->
+          </div>
+        </div>
+        <div
+          class="commentaire-testimonial13 thq-section-padding commentaire-root-class-name"
+        >
+          <div class="commentaire-max-width thq-section-max-width">
+            <div class="commentaire-container">
+              <h2 class="commentaire-text thq-heading-2">
+                <span>Commentaire</span>
+              </h2>
+            </div>
+          </div>
+         
+            
+          <form id="commentForm" class="commentaire-form">
+            <!--***Demarrer node.js avec une commande(node test.js) dans le terminal apres avoir fait les installation-->
+            <label for="commentaire_id"></label><br><!---incrementer de commentaire le plus recent-->
+            <p>Actualiser votre page pour voir votre commentaire</p>
+            <!-- <input type="text" id="commentaire_id" name="commentaire_id"><br>--->
+    
+
+
+            <textarea id="text" name="text"
+              placeholder="Commentaire"
+              class="commentaire-textarea textarea"
+            ></textarea>
+            <div class="commentaire-container1">
+              
+            <input type="submit" value="Envoyer" onclick="incrementer()">
+            <!--
+              <button
+              type="submit" value="Envoyer"
+                onclick="incrementer()"
+                type="button"
+                autofocus="true"
+                class="commentaire-button button"
+              >
+                <span class="commentaire-text1">
+                  <span>Envoyer</span>
+                  <br />
+                </span>
+              </button>
+              -->
+            </div>
+          </form>
+        <div id="listeCommentaires" >
+          <div class="commentaire-container2 thq-card">
+            <div class="commentaire-container3">
+              <img
+                alt="image"
+                src="https://play.teleporthq.io/static/svg/default-img.svg"
+                class="commentaire-image"
+              />
+              <strong class="commentaire-text4 thq-body-large">
+                Touriste 
+              </strong>
+              <div class="commentaire-container4"></div>
+            </div>
+            <!---afficher les commnetaire-->
+            
+            <span class="commentaire-text5 thq-body-small">
+
+            </span>
+          
+          </div>
+
+          
+        </div>
+        </div>
+        <div class="page1-features3"></div>
+        <div class="page1-contact4"></div>
+        <div class="page1-footer5"></div>
+      </div>
+    </div>
+    <script src="villeJs.js"></script>
+  </body>
+</html>
