@@ -25,7 +25,48 @@ function createNode(element) {
   //end2
   
 
-  
+  //afficher la liste des nom de visite
+        //visite
+ 
+        const emp_ul4 = document.getElementById("nomVisite");
+        const elemH4 = document.getElementById("h4");
+        //elemH4.innerHTML = "Liste des visites";
+  function showList4() {
+    // document.getElementById('numberList').style.display = 'block';
+      
+ 
+
+      fetch(url2)
+        .then((resp) => resp.json())
+        .then(function (data) {
+          
+          let visite = data.items; //.results;
+          return visite.map(function (visite) {
+            let li = createNode("li"),
+              span = createNode("span");
+        
+              span.innerHTML = `${visite.nom_ville_visite} `;
+
+
+            append(li, span);
+            
+            append(emp_ul4, li);
+
+
+          });
+
+
+
+            
+        })
+
+        .catch(function (error) {
+          console.log(JSON.stringify(error));
+        });
+
+  }
+
+
   
   // JavaScript**********************afficher ville+Itinéraire********************
   // L’attribut src sera ajouté par la fonction afficherVille() lorsque l’utilisateur entre le nom d’une ville et clique sur le bouton “Rechercher”.
@@ -51,15 +92,15 @@ function createNode(element) {
             //****le code pour changer l'image ici
             var imgElement = document.getElementById('ville-image');
             if (visite === '') {
-                imgElement.src = './media/defaut.jpg'; // Assurez-vous que le chemin est correct
+                imgElement.src = './media/defaut.jpg'; // Assurez-vous que le dossier media dans le dossier page.web 
             }else if (visite === 'montréal') {
-                imgElement.src = './media/montreal.jpg'; // Assurez-vous que le chemin est correct
+                imgElement.src = './media/montreal.jpg'; 
             } else if (visite === 'toronto') {
-                imgElement.src = './media/toronto.jpg'; // Assurez-vous que le chemin est correct
+                imgElement.src = './media/toronto.jpg'; 
             } else if (visite === 'vancouver') {
-              imgElement.src = './media/vancouver.jpg'; // Assurez-vous que le chemin est correct
+              imgElement.src = './media/vancouver.jpg'; 
             } else {
-                imgElement.src = './media/defaut.jpg'; // Vous pouvez mettre une image par défaut ici
+                imgElement.src = './media/defaut.jpg';
             }
 
             //*****le code pour changer l'Itinéraire  ici
@@ -67,10 +108,9 @@ function createNode(element) {
             //pour google map 
             var carteElement = document.getElementsByClassName('contact13-iframe')[0];
             if (visite === '') {
-              itineraireElement.src = ''; // Assurez-vous que le chemin est correct
-              carteElement.style.setProperty('min-height', '0px', 'important');
-              carteElement.style.setProperty('min-width', '0px', 'important');
-              carteElement.style.setProperty('object-fit', '', 'important');
+              itineraireElement.src = ''; 
+              carteElement.style.minHeight ='0px';
+              carteElement.style.minWidth= '0px';
             }else if (visite === 'montréal') {
               itineraireElement.src = 'https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d178896.57776969406!2d-73.78775292602917!3d45.52507850114689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m3!3m2!1d45.4209593!2d-73.94924259999999!4m5!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!3m2!1d45.501886899999995!2d-73.56739189999999!4m3!3m2!1d45.558254399999996!2d-73.5486494!4m5!1s0x4cc91fa9f0a64aef%3A0x5362cc265cc0047d!2sElevation%20Trampoline%20%26%20Amusement%20Montreal!3m2!1d45.5991923!2d-73.6102314!4m3!3m2!1d45.507625399999995!2d-73.70197499999999!5e0!3m2!1sen!2sca!4v1716110908901!5m2!1sen!2sca" width="800" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'; // Assurez-vous que le chemin est correct
               carteElement.style.minHeight ='500px';
@@ -87,10 +127,10 @@ function createNode(element) {
                carteElement.style.minWidth= '500px';
                carteElement.style.objectFit='cover';
               }else {
-              itineraireElement.src = ''; // Vous pouvez mettre une image par défaut ici
-              carteElement.style.setProperty('min-height', '0px', 'important');
-              carteElement.style.setProperty('min-width', '0px', 'important');
-              carteElement.style.setProperty('object-fit', '', 'important');
+              itineraireElement.src = ''; 
+              carteElement.style.minHeight ='0px';
+              carteElement.style.minWidth= '0px';
+              
             }
         })
         .catch(function (error) {
@@ -123,8 +163,9 @@ function createTestimonial(commentaire) {
     // Définissez les attributs des éléments
     img.src = "https://play.teleporthq.io/static/svg/default-img.svg";
     img.alt = "image";
-    strong.textContent = "Touriste";
-    span.textContent = `${commentaire.touriste_touriste_id} ${commentaire.text}`;
+    strong.textContent = `Touriste ${commentaire.touriste_touriste_id} `;
+    //span.textContent = `${commentaire.touriste_touriste_id} ${commentaire.text}`;
+    span.textContent = ` ${commentaire.text}`;
 
     // Ajoutez les éléments au div interne
     divInner.appendChild(img);

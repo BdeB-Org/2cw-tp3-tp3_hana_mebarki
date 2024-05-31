@@ -1,6 +1,51 @@
-.afficherReservation{
-  margin:10% 0% 0% 0%
+/*body*/
+body{
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+#nomVisite{
+  position: absolute;
+}
+/*-------------------page reservation---------*/
+/* contenu afficher reservation*/
+#contenuAfficherReservation{
+  margin: 60% 0% 0% 0%;
+  position: absolute;
+  
+}
+/* button afficher reservation*/
+#buttonAfficherReservation{
+  margin: 10% 0% 0% 0%;
+  
+}
+/* button envoyer reservation*/
+#buttonEnvoyerReservation{
+  margin: 10% 0% 0% 0%;
+  
+}
+/*------------------------*
+
+
+/***-----------------page connection--------------*/
+#arrierPlanConnection{
+  background-color: #D9D9D9;
+  width: 700px;
+  height: 500px;
+  margin: 10% 0% 0% 25%;
+}
+
+#loginSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.listInformation{
+  margin: 10% 0% 0% 25%;
+}
+/*------------------------*/
+
 
 
 .toast4-container {
@@ -46,7 +91,8 @@
   color: #2c3667;
 }
 
-.toast4-buttons {
+/*option vers les autres pages*/
+.optionMenu {
   gap: 10px;
   width: 867px;
   height: 54px;
@@ -54,7 +100,7 @@
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  margin: 0% 10% 0% 0%;
+  margin: 0% 20% 0% 0%;
 }
 
 .toast4-button1 {
@@ -63,6 +109,7 @@
   font-family: "Arial";
   font-weight: bold;
   border-radius: 15px;
+  border: none;
   background-color: #003EB3;
   width: 200px;
   height: 30px;
@@ -105,6 +152,10 @@
   flex-shrink: 0;
   flex-direction: column;
 
+}
+/* pour le button qui affiche la liste des ville disponible */
+#root{
+  margin: 0% 40% 0% 0%;
 }
 
 /*pour image rest au milleu*/
@@ -356,13 +407,17 @@
   font-weight: 700;
 }
 */
+
+
+/*structeur de bloc de commentaire */
 .commentaire-container2 {
+  
   flex: 1;
-  width: 1136px;
+  width: 1000px;
   height: 172px;
   display: flex;
   align-self: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
 
   padding: 50px;
@@ -392,19 +447,13 @@
   padding-right: var(--dl-space-space-threeunits);
 }
 
-.commentaire-container4 {
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .commentaire-text5 {
   z-index: 100;
-  align-self: center;
+  align-self: left;
   text-align: left;
-  margin-bottom: 10px;
+  margin: 3% 0% 0% 0%;
 }
 
 .commentaire-root-class-name {
@@ -481,83 +530,8 @@
   justify-content: center;
 }
 
-/*********************************Style page 2**************************************/
-/*
-.toast4-container {
-  gap: var(--dl-space-space-unit);
-  width: 100%;
-  display: flex;
-  padding: var(--dl-space-space-unit);
-  position: relative;
-  align-items: center;
-  flex-direction: row;
-  background-color: #e2faff;
-}
-.toast4-logo {
-  height: 60px;
-  object-fit: cover;
-}
-.toast4-header {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.toast4-content {
-  gap: var(--dl-space-space-halfunit);
-  width: 606px;
-  height: 114px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.toast4-title {
-  color: #01025a;
-  font-size: 30px;
-  font-family: "Arial";
-}
-.toast4-subtitle {
-  color: #2c3667;
-}
-.toast4-buttons {
-  gap: var(--dl-space-space-halfunit);
-  width: 567px;
-  height: 54px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-.toast4-button1 {
-  color: #ffffff;
-  font-size: 20px;
-  font-family: "Arial";
-  border-radius: 15px;
-  background-color: var(--dl-color-primary-100);
-}
-.toast4-button2 {
-  fill: var(--dl-color-primary-100);
-  color: var(--dl-color-primary-100);
-  font-size: 20px;
-  font-family: "Arial";
-  border-color: var(--dl-color-primary-100);
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 15px;
-  background-color: #ffffff;
-}
-@media(max-width: 767px) {
-  .toast4-logo {
-    display: none;
-  }
-  .toast4-header {
-    gap: var(--dl-space-space-unit);
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-*/
+/*********************************Style page 2 reservation**************************************/
+
 
 .contact-form5-contact1 {
   display: flex;
@@ -596,21 +570,25 @@
 .contact-form5-form {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 352px;
-  height: 465px;
+  height: 365px;
   align-self: center;
   align-items: center;
   padding-right: 42px;
   justify-content: center;
+  margin: 0% 0% 100% 0%;
 }
 
 .contact-form5-input {
-  gap: 10px;
+ /*gap: 10px;*/
   width: 188px;
   display: flex;
   align-self: flex-start;
   align-items: flex-start;
   flex-direction: column;
+ 
 }
+
+
 
 .contact-form5-text2 {
   align-self: flex-start;
@@ -649,7 +627,7 @@
 }
 
 .contact-form5-input2 {
-  gap: 10px;
+  
   width: 214px;
   display: flex;
   align-self: stretch;

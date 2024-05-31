@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Page2 - Reflecting Physical Hare</title>
-  <meta property="og:title" content="Page2 - Reflecting Physical Hare" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="./stypePage1.css" />
-  <script src="reservation.js"></script>
-</head>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Réserver vos places</title>
+      <!--button internet bootstrap3-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <!--feuile de style-->
+      <link rel="stylesheet" href="./style.css" />
+      <!--line vers java -->
+      <script src="./reservation.js"></script>
+      
+  </head>
 
 <body>
   
@@ -36,10 +41,10 @@
           </span>
           <br>
         </div>
-        <div class="toast4-buttons">
+        <div class="optionMenu">
           <!---reference vers autre page-->
-          <a href="./ville.html">
-            <button type="button" autofocus="true" class="toast4-button1 thq-button-filled">
+          <a href="./decouvrir.html">
+            <button type="button"  class="toast4-button1 thq-button-filled">
               <span>Découvrir les villes</span>
             </button>
           </a>
@@ -60,10 +65,7 @@
     <div class="page2-hero2"></div>
     <div class="contact-form5-contact1 thq-section-padding">
       <div class="thq-section-max-width thq-flex-column">
-        <span>
-          <date-time-primitive format="DD/MM/YYYY"
-            date="Sun May 19 2024 17:30:08 GMT-0400 (heure d’été de l’Est nord-américain)"></date-time-primitive>
-        </span>
+
         <div class="contact-form5-section-title thq-flex-column">
           <div class="contact-form5-content">
             <h2 class="contact-form5-text thq-heading-2">
@@ -78,6 +80,7 @@
           </div>
         </div>
         <div class="contact-form5-container">
+          <!------***Formulaire***si il est rempli il va rediriger vers la page connexion (pour engergister la reservation sous un compte)----->
           <form  action="./connexion.html"  method="get" id="busForm" class="contact-form5-form thq-flex-column">
             <div class="contact-form5-input">
               <p class="question-formulaire"><span>*</span>Autobus touristiques</p>
@@ -122,17 +125,7 @@
 
 
               </label>
-              <!--
-                  <select
-                  title="s"
-                    id="nombreDePassage"
-                    class="contact-form5-select1 thq-select"
-                  >
-                    <option value="Option 1">Customer service</option>
-                    <option value="Option 2">Finance</option>
-                    <option value="Option 3">Feature request</option>
-                  </select>
-                  -->
+     
             </div>
             <div class="contact-form5-input2">
               <p class="question-formulaire"> Le type de repas préféré</p>
@@ -154,38 +147,24 @@
                 J'accepte les termes et services
               </label>
             </div>
-            <a href="./connexion.html">
-             <input type="submit"  value="Envoyer" >
-            </a>
-
-            <input type="button" value="Afficher reservation" onclick="afficherReservation()">
+             <!-- button envoyer reservation-->
+          
+             <input id="buttonEnvoyerReservation" class="btn btn-danger" type="submit"  value="Envoyer" >
+            
+             <!-- button afficher reservation-->
+            <input id="buttonAfficherReservation" class="btn btn-info" type="button" value="Afficher reservation" onclick="afficherReservation()">
+            <div id = "contenuAfficherReservation">
             <p id="afficherReservation"></p>
-            <!--
-                <button
-                  type="submit"
-                  class="contact-form5-button thq-button-filled"
-                >
-                  <span class="contact-form5-action1 thq-body-small">
-                    Réserver vos places
-                  </span>
-                </button>
-                 -->
-            <!--
-                <button
-                  type="submit"
-                  class="contact-form5-button1 thq-button-filled"
-                >
-                  <span class="contact-form5-action11 thq-body-small">
-                    Procéder au paiement
-                  </span>
-                </button>
-                -->
+            </div>
+       
           </form>
+          <!---fin du formualire -->
+           <!-- button calculer reservation-->
           <div class="contact-form5-container1">
-            <input type="button" id="button_solde" value="Afficher votre solde total" onclick="afficherSolde()">
+            <input type="button" id="button_solde" class="btn btn-info" value="Afficher votre solde total" onclick="afficherSolde()">
             <br>
             <br>
-            <p>Votre solde total est:<span id="solde"></span></span></p>
+            <p>Votre coût total est:<span id="solde"></span></span></p>
         
          
          

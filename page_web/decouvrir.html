@@ -1,19 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <title>Page1 - Reflecting Physical Hare</title>
-    <meta property="og:title" content="Page1 - Reflecting Physical Hare" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-
-
-    
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Découvrir les villes </title>
+      <!--button internet bootstrap3-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      <!--feuile de style-->
+      <link rel="stylesheet" href="./style.css" />
+      <!--line vers java en bas de la page just avant /body -->
   </head>
   <body>
-    <link rel="stylesheet" href="stypePage1.css" />
+    
     <div>
-      <link href="stypePage1.css" rel="stylesheet" />
+      
       
       <div class="page1-container">
         <!--Bannier debut-->
@@ -32,10 +36,10 @@
                 <span>Visite guidée en bus touristique dans des villes</span>
               </span>
             </div>
-            <div class="toast4-buttons">
+            <div class="optionMenu">
               <button
                 type="button"
-                autofocus="true"
+                toast4-button1
                 class="toast4-button1 thq-button-filled"
               >
                 <span>Découvrir les villes</span>
@@ -70,25 +74,29 @@
           
           <div class="features11-container1">
             <div class="features11-container2">
-              <button
-                type="button"
-                autofocus="true"
-                class="features11-button button"
-              >
-                <span class="features11-text1">
-                  <span>Ville</span>
-                  <br />
+              <!--button pour Afficher la liste des noms de visites -->
+              <div id="root">
+                <!--<h1 id="h4"></h1>-->
+                <button onclick="showList4()" class="btn btn-info" >Afficher la liste des noms de visites</button>
+                <span id="affichage">
+                <ul id="nomVisite"></ul>
                 </span>
-              </button>
+                
+              </div>
+         
             </div>
+            
           </div>
+
+       
           <div
             class="thq-section-max-width thq-flex-column features11-max-width"
           >
             <!--image de la ville va changer avec un id-->
+            <!--../media/defaut.jpg-->
             <img height="50px" width="50px"
               alt="image" id="ville-image"
-              src="./media/defaut.jpg"
+              src="../media/defaut.jpg" 
               class="ville-image thq-img-ratio-4-3"
             />
             <div class="thq-flex-column">
@@ -130,13 +138,7 @@
               class="contact13-iframe"
               id="ville-itineraire"
             ></iframe>
-            <!---
-            <img
-              alt="noimage"
-              src="https://maps.app.goo.gl/Lo3ECSB8V9tMyPQB7"
-              class="contact13-image thq-img-ratio-16-9"
-            />
-            -->
+     
           </div>
         </div>
         <div
@@ -152,7 +154,10 @@
          
             
           <form id="commentForm" class="commentaire-form">
-            <!--***Demarrer node.js avec une commande(node test.js) dans le terminal apres avoir fait les installation-->
+            <!--***Demarrer node.js avec une commande(node node_commentaire.js) dans le terminal 
+              apres avoir fait les installation necessaire 
+              avec les commandes (npm install express oracledb body-parser)
+             (npm install cors) dans les termial de VS code-->
             <label for="commentaire_id"></label><br><!---incrementer de commentaire le plus recent-->
             <p>Actualiser votre page pour voir votre commentaire</p>
             <!-- <input type="text" id="commentaire_id" name="commentaire_id"><br>--->
@@ -164,41 +169,34 @@
               class="commentaire-textarea textarea"
             ></textarea>
             <div class="commentaire-container1">
-              
-            <input type="submit" value="Envoyer" onclick="incrementer()">
-            <!--
-              <button
-              type="submit" value="Envoyer"
-                onclick="incrementer()"
-                type="button"
-                autofocus="true"
-                class="commentaire-button button"
-              >
-                <span class="commentaire-text1">
-                  <span>Envoyer</span>
-                  <br />
-                </span>
-              </button>
-              -->
+              <!--envoyer un commentaire et incrementer le id de commentaire-->
+            <input type="submit" value="Envoyer" class="btn btn-primary" onclick="incrementer()">
+ 
             </div>
           </form>
+          <!---Structeur des comentaire-->
         <div id="listeCommentaires" >
-          <div class="commentaire-container2 thq-card">
+          <div class="commentaire-container2 ">
             <div class="commentaire-container3">
               <img
                 alt="image"
                 src="https://play.teleporthq.io/static/svg/default-img.svg"
                 class="commentaire-image"
               />
+              <!--nom de l'utilisateur-->
               <strong class="commentaire-text4 thq-body-large">
-                Touriste 
+                Administration 
               </strong>
-              <div class="commentaire-container4"></div>
+              <!--
+              <div class="commentaire-container4">
+
+              </div>
+              -->
             </div>
             <!---afficher les commnetaire-->
             
-            <span class="commentaire-text5 thq-body-small">
-
+            <span class="commentaire-text5 ">
+              Voulez-vous partager et discuter de vos avis sur votre expérience des visites proposées.
             </span>
           
           </div>
@@ -211,6 +209,6 @@
         <div class="page1-footer5"></div>
       </div>
     </div>
-    <script src="villeJs.js"></script>
+    <script src="./decouvrir.js"></script>
   </body>
 </html>
