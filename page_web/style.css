@@ -41,9 +41,16 @@ body{
   gap: 10px;
 }
 
+#titrePageAdmin{
+  display: none;
+}
+
 .listInformation{
   margin: 10% 0% 0% 25%;
+  display: none;
 }
+
+
 /*------------------------*/
 
 
